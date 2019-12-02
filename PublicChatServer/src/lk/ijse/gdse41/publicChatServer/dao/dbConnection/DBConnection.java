@@ -17,12 +17,9 @@ public class DBConnection {
             InputStream input = new FileInputStream(new File("PublicChatServer/dbSettings/settings.properties"));
             dbPro.load(input);
             System.out.println("Pass : "+dbPro.getProperty("password"));
-            String setDB=String.format("jdbc:mysql://%s:%s/%s", dbPro.getProperty("ip"),dbPro.getProperty("port"),dbPro.getProperty("database"));
-            System.out.println(setDB);
-
+            String setDB=String.format("jdbc:mysql://localhost:3306/publicChat?useTimezone=true&serverTimezone=UTC", dbPro.getProperty("ip"),dbPro.getProperty("port"),dbPro.getProperty("database"));
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection= DriverManager.getConnection(setDB,dbPro.getProperty("username"),dbPro.getProperty("password"));
-            System.out.println("Connected?");
             return connection;
         } catch (IOException ex) {
             ex.printStackTrace();

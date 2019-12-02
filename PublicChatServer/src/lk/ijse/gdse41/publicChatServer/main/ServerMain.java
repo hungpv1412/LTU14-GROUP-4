@@ -31,8 +31,6 @@ public class ServerMain {
             String[] ar={"cmd","/c","start","powershell.exe","-command","Read-Host"," Server Started","Press Enter to Exit......"};
 
             Process process=Runtime.getRuntime().exec(ar);
-            System.out.println("aaaaa");
-
             InputStream stderr = process.getErrorStream ();
 
             BufferedReader reader = new BufferedReader (new InputStreamReader(stderr));
