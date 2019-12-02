@@ -19,7 +19,7 @@ public class ServerConnector {
     private ServerConnector() throws IOException, NotBoundException {
         Properties properties=new Properties();
 //        InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream("settings.properties");
-        InputStream input = new FileInputStream(new File("dbSettings/settings.properties"));
+        InputStream input = new FileInputStream(new File("PublicChatClient/dbSettings/settings.properties"));
 
         properties.load(input);
 //        System.setProperty("java.rmi.server.hostname",properties.getProperty("ip"));

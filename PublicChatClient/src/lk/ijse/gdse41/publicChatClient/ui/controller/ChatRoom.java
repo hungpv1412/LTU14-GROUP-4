@@ -182,11 +182,11 @@ public class ChatRoom implements Initializable,ChatObserver {
         Circle img =new Circle(32,32,16);
         try{
             System.out.println(username);
-            String path= new File(String.format("resources/user-images/%s.png", username)).toURI().toString();
-            img.setFill(new ImagePattern(new Image(path)));
+            String path= new File(String.format("C:\\Users\\Drashyn\\OneDrive\\Documents\\GitHub\\ChatRoomFX\\PublicChatClient\\src\\lk\\ijse\\gdse41\\publicChatClient\\ui\\util\\images\\users\\user.png", username)).toURI().toString();
+            //img.setFill(new ImagePattern(new Image(path)));
         }catch (Exception ex){
-            String path= new File("resources/user-images/user.png").toURI().toString();
-            img.setFill(new ImagePattern(new Image(path)));
+            String path= new File("C:\\Users\\Drashyn\\OneDrive\\Documents\\GitHub\\ChatRoomFX\\PublicChatClient\\src\\lk\\ijse\\gdse41\\publicChatClient\\ui\\util\\images\\users\\user.png").toURI().toString();
+            //img.setFill(new ImagePattern(new Image(path)));
         }
 
         img.getStyleClass().add("imageView");
@@ -232,6 +232,7 @@ public class ChatRoom implements Initializable,ChatObserver {
         for(String client : clientList){
             if(client.equals(this.username)) continue;
 //            containerPane.getStyleClass().add("online-user-container");
+            System.out.println("update-client");
             HBox container=new HBox() ;
             container.setAlignment(Pos.CENTER_LEFT);
             container.setSpacing(10);
@@ -240,11 +241,13 @@ public class ChatRoom implements Initializable,ChatObserver {
             container.getStyleClass().add("online-user-container");
             Circle img =new Circle(30,30,15);
             try{
-                String path= new File(String.format("resources/user-images/%s.png", client)).toURI().toString();
+                String path= new File(String.format("C:\\Users\\Drashyn\\OneDrive\\Documents\\GitHub\\ChatRoomFX\\PublicChatClient\\src\\lk\\ijse\\gdse41\\publicChatClient\\ui\\util\\images\\users\\user.png", client)).toURI().toString();
+                System.out.println(path);
                 img.setFill(new ImagePattern(new Image(path)));
 
             }catch (Exception ex){
-                String path= new File("resources/user-images/user.png").toURI().toString();
+                String path= new File("C:\\Users\\Drashyn\\OneDrive\\Documents\\GitHub\\ChatRoomFX\\PublicChatClient\\src\\lk\\ijse\\gdse41\\publicChatClient\\ui\\util\\images\\users\\user.png").toURI().toString();
+                System.out.println(path);
                 img.setFill(new ImagePattern(new Image(path)));
             }
             container.getChildren().add(img);
