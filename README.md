@@ -1,9 +1,14 @@
-# LTU14-GROUP-4
+# ChatRoomFX
+JavaFX ChatRoom using JAVA RMI
 
-Lớp LTU 14 Nhóm 4
+# Important Notes : 
+- Create a database(MySQL) and create the "Users" table using "DBScript" file.
+- Change the "dbSettings/settings.properties" file as to your database configurations for the server.
+  (PublicChatServer>dbSettings)
+- Use the registry-port as 5050 (Recommended) or change the source code accourdingly in Server's Main class (ServerMain).
 
-Đề tài : Hệ Thống Chat Online RMI
-Cho phép người dùng chat trực tiếp và chat theo nhóm
-Quản lý người dùng và đăng ký trên server
-Docker và cung cấp tài liệu để setup hệ thống
+# Executing 
+*** Take note that the current implementation requires you to run the artifacts (jar files) instead of running the "main" classes 
+using the IDE (To avoid "FileNotFound execeptions for resources") -> Otherwise change the source code accordingly*** 
 
+# IDE - IntelliJ IDEA
